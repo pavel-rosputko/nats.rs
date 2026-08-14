@@ -557,7 +557,7 @@ impl Consumer<OrderedConfig> {
         };
         let stream = Stream::stream(
             BatchConfig {
-                batch: 500,
+                batch: 2500,
                 expires: Some(Duration::from_secs(30)),
                 no_wait: false,
                 max_bytes: 0,
@@ -2779,7 +2779,7 @@ async fn recreate_consumer_stream(
         Duration::from_secs(5),
         Stream::stream(
             BatchConfig {
-                batch: 500,
+                batch: 2500,
                 expires: Some(Duration::from_secs(30)),
                 no_wait: false,
                 max_bytes: 0,
